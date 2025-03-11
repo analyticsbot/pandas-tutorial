@@ -7,3 +7,8 @@ ipykernel>=6.0.0
 jupyter>=1.0.0
 numba
 scipy>=1.0.0
+pytest>=7.0.0
+openpyxl>=3.0.0
+lxml>=4.6.0
+tables>=3.6.0
+pyarrow>=7.0.0
