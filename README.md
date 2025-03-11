@@ -25,10 +25,27 @@ This tutorial is based on the pandas documentation PDF (version 1.4), which has 
 ## How to Use This Tutorial
 
 1. Clone this repository
-2. Make sure you have Jupyter Notebook installed
-3. Start with `part_1.ipynb` and progress through the numbered notebooks
-4. Run the code cells to see the functions in action
-5. Modify examples to experiment with your own data
+2. Set up a virtual environment and install dependencies:
+   ```bash
+   # Create a virtual environment
+   python -m venv venv
+   
+   # Activate the virtual environment
+   # On macOS/Linux:
+   source venv/bin/activate
+   # On Windows:
+   # venv\Scripts\activate
+   
+   # Install required packages
+   pip install -r requirements.txt
+   ```
+3. Start Jupyter Notebook:
+   ```bash
+   jupyter notebook
+   ```
+4. Start with `part_001.ipynb` and progress through the numbered notebooks
+5. Run the code cells to see the functions in action
+6. Modify examples to experiment with your own data
 
 Each notebook is designed to be independent, so you can also jump to specific topics you're interested in.
 
@@ -40,5 +57,21 @@ Each notebook is designed to be independent, so you can also jump to specific to
 - Time series analysis
 - Data visualization
 - Advanced pandas features
+
+## Utility Scripts
+
+### Syntax Checking
+
+This repository includes a script to check all notebooks for syntax errors without executing them:
+
+```bash
+# Activate the virtual environment first
+source venv/bin/activate
+
+# Run the syntax check script
+python run_all_notebooks.py
+```
+
+This script will scan all Jupyter notebooks in the repository and report any Python syntax errors found in code cells.
 
 Enjoy learning pandas in a simple, practical way!
