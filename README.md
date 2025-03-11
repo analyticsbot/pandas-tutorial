@@ -21,9 +21,10 @@ Welcome to the Pandas Tutorial! This project breaks down the official [pandas do
 ### Folder Structure
 
 - notebooks/
-    - part_XXX.ipynb 
+    - part_XXX.ipynb - Jupyter notebooks with pandas examples and explanations
 - pandas_pdf/
-    - part_XXX.pdf
+    - part_XXX.pdf - Original PDF sections from the pandas documentation
+    - pandas.pdf - The complete pandas documentation PDF
 
 ### How to Use This Tutorial
 
