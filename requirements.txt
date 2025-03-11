@@ -5,3 +5,5 @@ matplotlib>=3.4.0
 numpy>=1.20.0
 ipykernel>=6.0.0
 jupyter>=1.0.0
+numba
+scipy>=1.0.0
