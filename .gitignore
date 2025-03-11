@@ -3,6 +3,9 @@ venv/
 env/
 .env/
 
+# Utility scripts
+utilities/
+
 # Jupyter Notebook
 .ipynb_checkpoints
 
