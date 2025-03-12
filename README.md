@@ -62,24 +62,6 @@ Each notebook is designed to be independent, so you can also jump to specific to
 - Data visualization
 - Advanced pandas features
 
-### Utility Scripts
-
-This repository includes utility scripts in the `utilities/` directory:
-
-#### Syntax Checking
-
-You can check all notebooks for syntax errors without executing them:
-
-```bash
-# Activate the virtual environment first
-source venv/bin/activate
-
-# Run the syntax check script
-python utilities/run_all_notebooks.py
-```
-
-This script will scan all Jupyter notebooks in the repository and report any Python syntax errors found in code cells.
-
 ### How to Contribute
 
 If you see a gap in the tutorial, or can improve any of the examples, please open a pull request.
