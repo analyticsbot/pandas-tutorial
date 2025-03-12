@@ -58,3 +58,7 @@ notebooks/sample.json
 notebooks/sample.parquet
 notebooks/sample.pkl
 notebooks/styled_dataframe.html
+
+# Notebook checking scripts
+check_notebooks.py
+fix_notebooks.py
