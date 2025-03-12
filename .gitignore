@@ -41,3 +41,20 @@ bin-release/
 
 # Other files and folders
 .settings/
+
+# Specific data files
+notebooks/fixed_width.txt
+notebooks/large_sample_data.csv
+notebooks/no_header.xlsx
+notebooks/rename_notebooks.sh
+notebooks/sample_data.csv
+notebooks/sample_data.xlsx
+notebooks/sample_multi_sheet.xlsx
+notebooks/sample.csv
+notebooks/sample.dta
+notebooks/sample.h5
+notebooks/sample.html
+notebooks/sample.json
+notebooks/sample.parquet
+notebooks/sample.pkl
+notebooks/styled_dataframe.html
