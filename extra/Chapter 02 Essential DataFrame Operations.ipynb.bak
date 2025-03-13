@@ -20,7 +20,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 6,
+   "execution_count": 1,
    "metadata": {
     "collapsed": true
    },
@@ -40,24 +40,24 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 7,
+   "execution_count": 2,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/html": [
        "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
+       "<style>\n",
+       "    .dataframe thead tr:only-child th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: left;\n",
        "    }\n",
        "\n",
        "    .dataframe tbody tr th {\n",
        "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
        "    }\n",
        "</style>\n",
        "<table border=\"1\" class=\"dataframe\">\n",
@@ -119,37 +119,37 @@
        "4      Doug Walker        Rob Walker                   NaN        Doug Walker"
       ]
      },
-     "execution_count": 7,
+     "execution_count": 2,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
-    "movie = pd.read_csv('../notebooks/../notebooks/data/movie.csv')\n",
+    "movie = pd.read_csv('data/movie.csv')\n",
     "movie_actor_director = movie[['actor_1_name', 'actor_2_name', 'actor_3_name', 'director_name']]\n",
     "movie_actor_director.head()"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 8,
+   "execution_count": 3,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/html": [
        "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
+       "<style>\n",
+       "    .dataframe thead tr:only-child th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: left;\n",
        "    }\n",
        "\n",
        "    .dataframe tbody tr th {\n",
        "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
        "    }\n",
        "</style>\n",
        "<table border=\"1\" class=\"dataframe\">\n",
@@ -193,7 +193,7 @@
        "4        Doug Walker"
       ]
      },
-     "execution_count": 8,
+     "execution_count": 3,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -204,156 +204,40 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 10,
+   "execution_count": 4,
    "metadata": {},
    "outputs": [
     {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>actor_1_name</th>\n",
-       "      <th>actor_2_name</th>\n",
-       "      <th>actor_3_name</th>\n",
-       "      <th>director_name</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>0</th>\n",
-       "      <td>CCH Pounder</td>\n",
-       "      <td>Joel David Moore</td>\n",
-       "      <td>Wes Studi</td>\n",
-       "      <td>James Cameron</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>1</th>\n",
-       "      <td>Johnny Depp</td>\n",
-       "      <td>Orlando Bloom</td>\n",
-       "      <td>Jack Davenport</td>\n",
-       "      <td>Gore Verbinski</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>2</th>\n",
-       "      <td>Christoph Waltz</td>\n",
-       "      <td>Rory Kinnear</td>\n",
-       "      <td>Stephanie Sigman</td>\n",
-       "      <td>Sam Mendes</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>3</th>\n",
-       "      <td>Tom Hardy</td>\n",
-       "      <td>Christian Bale</td>\n",
-       "      <td>Joseph Gordon-Levitt</td>\n",
-       "      <td>Christopher Nolan</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>4</th>\n",
-       "      <td>Doug Walker</td>\n",
-       "      <td>Rob Walker</td>\n",
-       "      <td>NaN</td>\n",
-       "      <td>Doug Walker</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>...</th>\n",
-       "      <td>...</td>\n",
-       "      <td>...</td>\n",
-       "      <td>...</td>\n",
-       "      <td>...</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>5038</th>\n",
-       "      <td>Eric Mabius</td>\n",
-       "      <td>Daphne Zuniga</td>\n",
-       "      <td>Crystal Lowe</td>\n",
-       "      <td>Scott Smith</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>5039</th>\n",
-       "      <td>Natalie Zea</td>\n",
-       "      <td>Valorie Curry</td>\n",
-       "      <td>Sam Underwood</td>\n",
-       "      <td>NaN</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>5040</th>\n",
-       "      <td>Eva Boehnke</td>\n",
-       "      <td>Maxwell Moody</td>\n",
-       "      <td>David Chandler</td>\n",
-       "      <td>Benjamin Roberds</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>5041</th>\n",
-       "      <td>Alan Ruck</td>\n",
-       "      <td>Daniel Henney</td>\n",
-       "      <td>Eliza Coupe</td>\n",
-       "      <td>Daniel Hsia</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>5042</th>\n",
-       "      <td>John August</td>\n",
-       "      <td>Brian Herzlinger</td>\n",
-       "      <td>Jon Gunn</td>\n",
-       "      <td>Jon Gunn</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "<p>5043 rows \u00d7 4 columns</p>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "         actor_1_name      actor_2_name          actor_3_name  \\\n",
-       "0         CCH Pounder  Joel David Moore             Wes Studi   \n",
-       "1         Johnny Depp     Orlando Bloom        Jack Davenport   \n",
-       "2     Christoph Waltz      Rory Kinnear      Stephanie Sigman   \n",
-       "3           Tom Hardy    Christian Bale  Joseph Gordon-Levitt   \n",
-       "4         Doug Walker        Rob Walker                   NaN   \n",
-       "...               ...               ...                   ...   \n",
-       "5038      Eric Mabius     Daphne Zuniga          Crystal Lowe   \n",
-       "5039      Natalie Zea     Valorie Curry         Sam Underwood   \n",
-       "5040      Eva Boehnke     Maxwell Moody        David Chandler   \n",
-       "5041        Alan Ruck     Daniel Henney           Eliza Coupe   \n",
-       "5042      John August  Brian Herzlinger              Jon Gunn   \n",
-       "\n",
-       "          director_name  \n",
-       "0         James Cameron  \n",
-       "1        Gore Verbinski  \n",
-       "2            Sam Mendes  \n",
-       "3     Christopher Nolan  \n",
-       "4           Doug Walker  \n",
-       "...                 ...  \n",
-       "5038        Scott Smith  \n",
-       "5039                NaN  \n",
-       "5040   Benjamin Roberds  \n",
-       "5041        Daniel Hsia  \n",
-       "5042           Jon Gunn  \n",
-       "\n",
-       "[5043 rows x 4 columns]"
-      ]
-     },
-     "execution_count": 10,
-     "metadata": {},
-     "output_type": "execute_result"
+     "ename": "KeyError",
+     "evalue": "('actor_1_name', 'actor_2_name', 'actor_3_name', 'director_name')",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mKeyError\u001b[0m                                  Traceback (most recent call last)",
+      "\u001b[0;32m/Users/Ted/anaconda/lib/python3.6/site-packages/pandas/core/indexes/base.py\u001b[0m in \u001b[0;36mget_loc\u001b[0;34m(self, key, method, tolerance)\u001b[0m\n\u001b[1;32m   2441\u001b[0m             \u001b[0;32mtry\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 2442\u001b[0;31m                 \u001b[0;32mreturn\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_engine\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mget_loc\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mkey\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   2443\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mKeyError\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;32mpandas/_libs/index.pyx\u001b[0m in \u001b[0;36mpandas._libs.index.IndexEngine.get_loc (pandas/_libs/index.c:5280)\u001b[0;34m()\u001b[0m\n",
+      "\u001b[0;32mpandas/_libs/index.pyx\u001b[0m in \u001b[0;36mpandas._libs.index.IndexEngine.get_loc (pandas/_libs/index.c:5126)\u001b[0;34m()\u001b[0m\n",
+      "\u001b[0;32mpandas/_libs/hashtable_class_helper.pxi\u001b[0m in \u001b[0;36mpandas._libs.hashtable.PyObjectHashTable.get_item (pandas/_libs/hashtable.c:20523)\u001b[0;34m()\u001b[0m\n",
+      "\u001b[0;32mpandas/_libs/hashtable_class_helper.pxi\u001b[0m in \u001b[0;36mpandas._libs.hashtable.PyObjectHashTable.get_item (pandas/_libs/hashtable.c:20477)\u001b[0;34m()\u001b[0m\n",
+      "\u001b[0;31mKeyError\u001b[0m: ('actor_1_name', 'actor_2_name', 'actor_3_name', 'director_name')",
+      "\nDuring handling of the above exception, another exception occurred:\n",
+      "\u001b[0;31mKeyError\u001b[0m                                  Traceback (most recent call last)",
+      "\u001b[0;32m<ipython-input-4-954222273e42>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mmovie\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m'actor_1_name'\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m'actor_2_name'\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m'actor_3_name'\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m'director_name'\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;32m/Users/Ted/anaconda/lib/python3.6/site-packages/pandas/core/frame.py\u001b[0m in \u001b[0;36m__getitem__\u001b[0;34m(self, key)\u001b[0m\n\u001b[1;32m   1962\u001b[0m             \u001b[0;32mreturn\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_getitem_multilevel\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mkey\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1963\u001b[0m         \u001b[0;32melse\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1964\u001b[0;31m             \u001b[0;32mreturn\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_getitem_column\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mkey\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1965\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1966\u001b[0m     \u001b[0;32mdef\u001b[0m \u001b[0m_getitem_column\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mkey\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;32m/Users/Ted/anaconda/lib/python3.6/site-packages/pandas/core/frame.py\u001b[0m in \u001b[0;36m_getitem_column\u001b[0;34m(self, key)\u001b[0m\n\u001b[1;32m   1969\u001b[0m         \u001b[0;31m# get column\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1970\u001b[0m         \u001b[0;32mif\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mcolumns\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mis_unique\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1971\u001b[0;31m             \u001b[0;32mreturn\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_get_item_cache\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mkey\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1972\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1973\u001b[0m         \u001b[0;31m# duplicate columns & possible reduce dimensionality\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;32m/Users/Ted/anaconda/lib/python3.6/site-packages/pandas/core/generic.py\u001b[0m in \u001b[0;36m_get_item_cache\u001b[0;34m(self, item)\u001b[0m\n\u001b[1;32m   1643\u001b[0m         \u001b[0mres\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mcache\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mget\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mitem\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1644\u001b[0m         \u001b[0;32mif\u001b[0m \u001b[0mres\u001b[0m \u001b[0;32mis\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1645\u001b[0;31m             \u001b[0mvalues\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_data\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mget\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mitem\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1646\u001b[0m             \u001b[0mres\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_box_item_values\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mitem\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mvalues\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1647\u001b[0m             \u001b[0mcache\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0mitem\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mres\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;32m/Users/Ted/anaconda/lib/python3.6/site-packages/pandas/core/internals.py\u001b[0m in \u001b[0;36mget\u001b[0;34m(self, item, fastpath)\u001b[0m\n\u001b[1;32m   3588\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   3589\u001b[0m             \u001b[0;32mif\u001b[0m \u001b[0;32mnot\u001b[0m \u001b[0misnull\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mitem\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 3590\u001b[0;31m                 \u001b[0mloc\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mitems\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mget_loc\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mitem\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   3591\u001b[0m             \u001b[0;32melse\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   3592\u001b[0m                 \u001b[0mindexer\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mnp\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0marange\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mlen\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mitems\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0misnull\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mitems\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;32m/Users/Ted/anaconda/lib/python3.6/site-packages/pandas/core/indexes/base.py\u001b[0m in \u001b[0;36mget_loc\u001b[0;34m(self, key, method, tolerance)\u001b[0m\n\u001b[1;32m   2442\u001b[0m                 \u001b[0;32mreturn\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_engine\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mget_loc\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mkey\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   2443\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mKeyError\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 2444\u001b[0;31m                 \u001b[0;32mreturn\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_engine\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mget_loc\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_maybe_cast_indexer\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mkey\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   2445\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   2446\u001b[0m         \u001b[0mindexer\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mget_indexer\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0mkey\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mmethod\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mmethod\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mtolerance\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mtolerance\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;32mpandas/_libs/index.pyx\u001b[0m in \u001b[0;36mpandas._libs.index.IndexEngine.get_loc (pandas/_libs/index.c:5280)\u001b[0;34m()\u001b[0m\n",
+      "\u001b[0;32mpandas/_libs/index.pyx\u001b[0m in \u001b[0;36mpandas._libs.index.IndexEngine.get_loc (pandas/_libs/index.c:5126)\u001b[0;34m()\u001b[0m\n",
+      "\u001b[0;32mpandas/_libs/hashtable_class_helper.pxi\u001b[0m in \u001b[0;36mpandas._libs.hashtable.PyObjectHashTable.get_item (pandas/_libs/hashtable.c:20523)\u001b[0;34m()\u001b[0m\n",
+      "\u001b[0;32mpandas/_libs/hashtable_class_helper.pxi\u001b[0m in \u001b[0;36mpandas._libs.hashtable.PyObjectHashTable.get_item (pandas/_libs/hashtable.c:20477)\u001b[0;34m()\u001b[0m\n",
+      "\u001b[0;31mKeyError\u001b[0m: ('actor_1_name', 'actor_2_name', 'actor_3_name', 'director_name')"
+     ]
     }
    ],
    "source": [
-    "movie[['actor_1_name', 'actor_2_name', 'actor_3_name', 'director_name']]"
+    "movie['actor_1_name', 'actor_2_name', 'actor_3_name', 'director_name']"
    ]
   },
   {
@@ -402,8 +286,8 @@
     }
    ],
    "source": [
-    "movie = pd.read_csv('../notebooks/data/movie.csv', index_col='movie_title')\n",
-    "movie.dtypes.value_counts()"
+    "movie = pd.read_csv('data/movie.csv', index_col='movie_title')\n",
+    "movie.get_dtype_counts()"
    ]
   },
   {
@@ -1179,7 +1063,7 @@
    },
    "outputs": [],
    "source": [
-    "movie = pd.read_csv('../notebooks/data/movie.csv')"
+    "movie = pd.read_csv('data/movie.csv')"
    ]
   },
   {
@@ -1856,7 +1740,7 @@
    ],
    "source": [
     "pd.options.display.max_rows = 8\n",
-    "movie = pd.read_csv('../notebooks/data/movie.csv')\n",
+    "movie = pd.read_csv('data/movie.csv')\n",
     "movie.shape"
    ]
   },
@@ -2893,7 +2777,7 @@
     }
    ],
    "source": [
-    "movie = pd.read_csv('../notebooks/data/movie.csv')\n",
+    "movie = pd.read_csv('data/movie.csv')\n",
     "movie.isnull().head()"
    ]
   },
@@ -2987,7 +2871,7 @@
     }
    ],
    "source": [
-    "movie.isnull().dtypes.value_counts()"
+    "movie.isnull().get_dtype_counts()"
    ]
   },
   {
@@ -3026,7 +2910,7 @@
      "data": {
       "text/plain": [
        "color                                                          Color\n",
-       "director_name                                          \u00c9tienne Faure\n",
+       "director_name                                          Étienne Faure\n",
        "actor_2_name                                           Zubaida Sahar\n",
        "genres                                                       Western\n",
        "                                         ...                        \n",
@@ -5270,7 +5154,7 @@
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
-       "<p>7535 rows \u00d7 9 columns</p>\n",
+       "<p>7535 rows × 9 columns</p>\n",
        "</div>"
       ],
       "text/plain": [
@@ -5425,7 +5309,7 @@
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
-       "<p>10 rows \u00d7 1 columns</p>\n",
+       "<p>10 rows × 1 columns</p>\n",
        "</div>"
       ],
       "text/plain": [
@@ -6133,7 +6017,7 @@
  ],
  "metadata": {
   "kernelspec": {
-   "display_name": "venv",
+   "display_name": "Python 3",
    "language": "python",
    "name": "python3"
   },
@@ -6147,7 +6031,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.13.2"
+   "version": "3.6.1"
   }
  },
  "nbformat": 4,
