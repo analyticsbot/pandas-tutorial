@@ -14,3 +14,4 @@ tables>=3.6.0
 pyarrow>=7.0.0
 pandas-datareader>=0.10.0
 yfinance>=0.2.30
+seaborn>=0.12.0
