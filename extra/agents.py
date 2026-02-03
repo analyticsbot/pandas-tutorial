@@ -31,7 +31,7 @@ def set_agent_state(chapter, file, agent_name, status):
     current_state_file.write_text(json.dumps(state))
 
 # ---------------- Load PDFs ----------------
-pdf_folder = Path("/Users/dks0790796/Downloads/Personal/pandas-tutorial/pandas_pdf")
+pdf_folder = Path("/Users//Downloads/Personal/pandas-tutorial/pandas_pdf")
 pdf_files = sorted(pdf_folder.glob("part_*.pdf"))
 pdf_pages, pdf_page_texts = [], []
 
@@ -63,7 +63,7 @@ def retrieve_relevant_pages(query, top_k=5):
     return results
 
 # ---------------- Load Jupyter Book ----------------
-book_root = Path("/Users/dks0790796/Downloads/Personal/pandas-tutorial/book/chapters")
+book_root = Path("/Users//Downloads/Personal/pandas-tutorial/book/chapters")
 chapter_dirs = sorted([d for d in book_root.iterdir() if d.is_dir() and d.name.startswith("chapter")])
 chapters = []
 for chapter_dir in chapter_dirs:
